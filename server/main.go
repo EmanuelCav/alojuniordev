@@ -21,7 +21,7 @@ func main() {
 
 	routes.UserRoutes(app)
 
-	err := app.Listen(":" + config.Port())
+	err := app.Listen(":" + config.Config()["port"])
 
 	if err != nil {
 		panic("Error to connect server")

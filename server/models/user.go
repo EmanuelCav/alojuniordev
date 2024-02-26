@@ -8,15 +8,16 @@ import (
 )
 
 type UserModel struct {
-	ID        primitive.ObjectID `json:"_id,omitempty" bson:"_id,omitempty"`
-	Username  string             `json:"username,omitempty" validate:"required" bson:"username,omitempty"`
-	Password  string             `json:"password,omitempty" validate:"required" bson:"password,omitempty" mson:"cunique"`
-	Email     string             `json:"email,omitempty" validate:"required" bson:"email,omitempty" mson:"cunique"`
-	Role      primitive.ObjectID `json:"test" bson:"role" mson:"collection=RoleModel"`
-	Phone     string             `json:"phone" bson:"phone" mson:"cunique"`
-	Status    bool               `json:"status" bson:"status"`
-	CreatedAt primitive.DateTime `json:"created_at,omitempty" bson:"created_at"`
-	UpdatedAt primitive.DateTime `json:"updated_at,omitempty" bson:"updated_at"`
+	ID         primitive.ObjectID `json:"_id,omitempty" bson:"_id,omitempty"`
+	Username   string             `json:"username,omitempty" validate:"required" bson:"username,omitempty"`
+	Password   string             `json:"password,omitempty" validate:"required" bson:"password,omitempty" mson:"cunique"`
+	Email      string             `json:"email,omitempty" validate:"required" bson:"email,omitempty" mson:"cunique"`
+	Role       primitive.ObjectID `json:"role" bson:"role" mson:"collection=RoleModel"`
+	Phone      string             `json:"phone" bson:"phone" mson:"cunique"`
+	Reputation int                `json:"reputation,omitempty" bson:"reputation,omitempty"`
+	Status     bool               `json:"status,omitempty" bson:"status,omitempty"`
+	CreatedAt  primitive.DateTime `json:"created_at,omitempty" bson:"created_at,omitempty"`
+	UpdatedAt  primitive.DateTime `json:"updated_at,omitempty" bson:"updated_at,omitempty"`
 }
 
 // type UserModel struct {
@@ -36,14 +37,14 @@ type UserModel struct {
 // 	Status        int                `json:"status" bson:"status"`
 // }
 
-//PopulateTest This will populate the test field and give to you
+// PopulateTest This will populate the test field and give to you
 func (c *UserModel) PopulateTest() *UserModel {
 	u := UserModel{}
 	mongoose.PopulateObject(c, "Test", &u)
 	return &u
 }
 
-//PopulateTeams This will populate the teams and give it to you
+// PopulateTeams This will populate the teams and give it to you
 func (c *UserModel) PopulateTeams() *[]UserModel {
 	teams := make([]UserModel, 0)
 	err := mongoose.PopulateObjectArray(c, "Teams", &teams)

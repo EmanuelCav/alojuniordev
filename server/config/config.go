@@ -1,15 +1,26 @@
 package config
 
-import "os"
+import (
+	"log"
 
-func Port() string {
-	return os.Getenv("PORT")
-}
+	"github.com/joho/godotenv"
+)
 
-func Database() string {
-	return os.Getenv("DATABASE")
-}
+func Config() map[string]string {
 
-func Uri() string {
-	return os.Getenv("URI")
+	envFile, err := godotenv.Read(".env")
+
+	if err != nil {
+		log.Fatal("Error loading env file")
+	}
+
+	variables := make(map[string]string)
+
+	variables["port"] = envFile["PORT"]
+	variables["uri"] = envFile["URI"]
+	variables["database"] = envFile["DATABASE"]
+	variables["userCollection"] = envFile["USER_COLLECTION"]
+
+	return variables
+
 }

@@ -7,7 +7,7 @@ import (
 
 func GetCollection(collectioName string) *mongo.Collection {
 
-	collection := DatabaseConnection().Database(config.Database()).Collection(collectioName)
+	collection := DatabaseConnection().Database(config.Config()["database"]).Collection(collectioName)
 
 	return collection
 
