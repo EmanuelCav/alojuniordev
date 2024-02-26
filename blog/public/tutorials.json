@@ -1,0 +1,136 @@
+[
+    {
+        "tool": "JavaScript",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708368166/blog/JavaScript_p5jl5g.png",
+        "category": "Lenguages de Programación",
+        "shortDescription": "",
+        "description": "",
+        "tabs": [{
+            "title": "Variables",
+            "description": "fkdñl jkfd jd jkfdjp fd jfkdsjl jldsj jdlsfj jfjdsjl",
+            "syntax": [{
+                
+            }]
+        },{
+            "title": "Variables",
+            "description": "fkdñl jkfd jd jkfdjp fd jfkdsjl jldsj jdlsfj jfjdsjl",
+            "syntax": [{
+                
+            }]
+        },{
+            "title": "Variables",
+            "description": "fkdñl jkfd jd jkfdjp fd jfkdsjl jldsj jdlsfj jfjdsjl",
+            "syntax": [{
+                
+            }]
+        },{
+            "title": "Variables",
+            "description": "fkdñl jkfd jd jkfdjp fd jfkdsjl jldsj jdlsfj jfjdsjl",
+            "syntax": [{
+                
+            }]
+        },{
+            "title": "Variables",
+            "description": "fkdñl jkfd jd jkfdjp fd jfkdsjl jldsj jdlsfj jfjdsjl",
+            "syntax": [{
+                
+            }]
+        },{
+            "title": "Variables",
+            "description": "fkdñl jkfd jd jkfdjp fd jfkdsjl jldsj jdlsfj jfjdsjl",
+            "syntax": [{
+                
+            }]
+        },{
+            "title": "Variables",
+            "description": "fkdñl jkfd jd jkfdjp fd jfkdsjl jldsj jdlsfj jfjdsjl",
+            "syntax": [{
+                
+            }]
+        },{
+            "title": "Variables",
+            "description": "fkdñl jkfd jd jkfdjp fd jfkdsjl jldsj jdlsfj jfjdsjl",
+            "syntax": [{
+                
+            }]
+        },{
+            "title": "Variables",
+            "description": "fkdñl jkfd jd jkfdjp fd jfkdsjl jldsj jdlsfj jfjdsjl",
+            "syntax": [{
+                
+            }]
+        },{
+            "title": "Variables",
+            "description": "fkdñl jkfd jd jkfdjp fd jfkdsjl jldsj jdlsfj jfjdsjl",
+            "syntax": [{
+                
+            }]
+        }]
+    },
+    {
+        "tool": "Python",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708368255/blog/python_xkb3jq.png",
+        "category": "Lenguages de Programación",
+        "shortDescription": ""
+    },
+    {
+        "tool": "TypeScript",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708368339/blog/Typescript_wjrfvi.png",
+        "category": "Lenguages de Programación",
+        "shortDescription": ""
+    },
+    {
+        "tool": "Golang",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708370129/blog/go_fbovrh.png",
+        "category": "Lenguages de Programación",
+        "shortDescription": ""
+    },
+    {
+        "tool": "C#",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708369915/blog/c_sharp_rit3au.png",
+        "category": "Lenguages de Programación",
+        "shortDescription": ""
+    },
+    {
+        "tool": "Java",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708368609/blog/java_biexaf.png",
+        "category": "Lenguages de Programación",
+        "shortDescription": ""
+    },
+    {
+        "tool": "PHP",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708368607/blog/php_wrodh0.png",
+        "category": "Lenguages de Programación",
+        "shortDescription": ""
+    },
+    {
+        "tool": "C++",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708369915/blog/c_place_place_mcaidf.png",
+        "category": "Lenguages de Programación",
+        "shortDescription": ""
+    },
+    {
+        "tool": "C",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708369915/blog/c_gjrc3t.png",
+        "category": "Lenguages de Programación",
+        "shortDescription": ""
+    },
+    {
+        "tool": "Rust",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708369915/blog/rust_e29qmc.png",
+        "category": "Lenguages de Programación",
+        "shortDescription": ""
+    },
+    {
+        "tool": "Kotlin",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708368609/blog/kotlin_mn1cl2.png",
+        "category": "Lenguages de Programación",
+        "shortDescription": ""
+    },
+    {
+        "tool": "Node.js",
+        "image": "",
+        "category": "Framework Web",
+        "shortDescription": ""
+    }
+]

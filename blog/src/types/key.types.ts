@@ -1,0 +1,1 @@
+export type CategoryTypes = 'Lenguages de Programación' | 'Frameworks Web' | 'Analísis de Datos'
