@@ -20,6 +20,7 @@ func main() {
 	app.Use(logger.New())
 
 	routes.UserRoutes(app)
+	routes.RoleRoutes(app)
 
 	err := app.Listen(":" + config.Config()["port"])
 

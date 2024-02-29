@@ -8,9 +8,9 @@ import (
 )
 
 type UserModel struct {
-	ID         primitive.ObjectID `json:"_id,omitempty" bson:"_id,omitempty"`
-	Username   string             `json:"username,omitempty" validate:"required" bson:"username,omitempty"`
-	Password   string             `json:"password,omitempty" validate:"required" bson:"password,omitempty" mson:"cunique"`
+	Id         primitive.ObjectID `json:"_id,omitempty" bson:"_id,omitempty"`
+	Username   string             `json:"username,omitempty" validate:"required" bson:"username,omitempty" mson:"cunique"`
+	Password   string             `json:"password,omitempty" validate:"required" bson:"password,omitempty"`
 	Email      string             `json:"email,omitempty" validate:"required" bson:"email,omitempty" mson:"cunique"`
 	Role       primitive.ObjectID `json:"role" bson:"role" mson:"collection=RoleModel"`
 	Phone      string             `json:"phone" bson:"phone" mson:"cunique"`
@@ -18,6 +18,14 @@ type UserModel struct {
 	Status     bool               `json:"status,omitempty" bson:"status,omitempty"`
 	CreatedAt  primitive.DateTime `json:"created_at,omitempty" bson:"created_at,omitempty"`
 	UpdatedAt  primitive.DateTime `json:"updated_at,omitempty" bson:"updated_at,omitempty"`
+}
+
+type UserRegisterModel struct {
+	Username string `json:"username,omitempty" validate:"required" bson:"username,omitempty" mson:"cunique"`
+	Password string `json:"password,omitempty" validate:"required" bson:"password,omitempty"`
+	Confirm  string `json:"confirm,omitempty" validate:"required" bson:"confirm,omitempty"`
+	Email    string `json:"email,omitempty" validate:"required" bson:"email,omitempty" mson:"cunique"`
+	Role     string `json:"role" bson:"role" mson:"collection=RoleModel"`
 }
 
 // type UserModel struct {

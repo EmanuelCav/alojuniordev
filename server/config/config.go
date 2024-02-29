@@ -19,7 +19,10 @@ func Config() map[string]string {
 	variables["port"] = envFile["PORT"]
 	variables["uri"] = envFile["URI"]
 	variables["database"] = envFile["DATABASE"]
+	variables["jwt"] = envFile["JWT"]
 	variables["userCollection"] = envFile["USER_COLLECTION"]
+	variables["roleCollection"] = envFile["ROLE_COLLECTION"]
+	variables["userMainRole"] = envFile["USER_MAIN_ROLE"]
 
 	return variables
 
