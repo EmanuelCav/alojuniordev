@@ -148,6 +148,8 @@ func Register(c *fiber.Ctx) error {
 		})
 	}
 
+	// userLoggedIn :=
+
 	token := helper.GenerateToken(newUser.Id)
 
 	return c.Status(fiber.StatusAccepted).JSON(&fiber.Map{
@@ -160,8 +162,43 @@ func Register(c *fiber.Ctx) error {
 
 func Login(c *fiber.Ctx) error {
 
+	var user models.UserLoginModel
+	var userLoggedIn models.UserModel
+
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	err := c.BodyParser(&user)
+
+	if err != nil {
+		return c.Status(fiber.StatusBadRequest).JSON(&fiber.Map{
+			"message": err.Error(),
+		})
+	}
+
+	errValidator := helper.Validate().Struct(&user)
+
+	if errValidator != nil {
+		return c.Status(fiber.StatusBadRequest).JSON(&fiber.Map{
+			"message": "Hay campos vacios. Por favor completa",
+		})
+	}
+
+	errValidation := middleware.LoginValid(user)
+
+	if errValidation != "" {
+		return c.Status(fiber.StatusBadRequest).JSON(&fiber.Map{
+			"message": errValidation,
+		})
+	}
+
+	helper.ConnectionUser().FindOne(ctx, bson.M{"email": user.Email}, helper.UserFilter()).Decode(&userLoggedIn)
+
+	token := helper.GenerateToken(userLoggedIn.Id)
+
 	return c.Status(fiber.StatusAccepted).JSON(&fiber.Map{
-		"user": "Login",
+		"user":  userLoggedIn,
+		"token": token,
 	})
 
 }

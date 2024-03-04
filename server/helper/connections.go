@@ -15,6 +15,14 @@ func ConnectionRole() *mongo.Collection {
 	return database.GetCollection(config.Config()["roleCollection"])
 }
 
+func ConnectionCategory() *mongo.Collection {
+	return database.GetCollection(config.Config()["categoryCollection"])
+}
+
+func ConnectionTool() *mongo.Collection {
+	return database.GetCollection(config.Config()["toolCollection"])
+}
+
 func Validate() *validator.Validate {
 	return validator.New()
 }

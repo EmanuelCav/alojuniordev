@@ -22,6 +22,8 @@ func Config() map[string]string {
 	variables["jwt"] = envFile["JWT"]
 	variables["userCollection"] = envFile["USER_COLLECTION"]
 	variables["roleCollection"] = envFile["ROLE_COLLECTION"]
+	variables["categoryCollection"] = envFile["CATEGORY_COLLECTION"]
+	variables["toolCollection"] = envFile["TOOL_COLLECTION"]
 	variables["userMainRole"] = envFile["USER_MAIN_ROLE"]
 
 	return variables

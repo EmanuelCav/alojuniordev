@@ -21,6 +21,11 @@ func HashPassword(password string) string {
 	return string(hash)
 }
 
+func CompareHash(hash string, password string) bool {
+	err := bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
+	return err == nil
+}
+
 func GenerateToken(id primitive.ObjectID) string {
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{

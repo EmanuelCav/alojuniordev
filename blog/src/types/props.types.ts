@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 import { ITutorial } from "@/interface/Content";
-import { CategoryTypes } from "./key.types";
+import { CategoryTypes, InputTypes } from "./key.types";
 
 export type NavigationTypeProps = {
     text: string;
@@ -22,4 +22,15 @@ export type SectionMainPropsType = {
 export type TutorialSectionPropsType = {
     tutorialSection: ITutorial[];
     title: CategoryTypes;
+}
+
+export type FormsPropsType = {
+    handleViewForm: () => void;
+    isRegister: boolean;
+}
+
+export type InputPropsType = {
+    type: InputTypes;
+    text: string;
+    autofocus: boolean;
 }

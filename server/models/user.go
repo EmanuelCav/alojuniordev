@@ -28,6 +28,11 @@ type UserRegisterModel struct {
 	Role     string `json:"role" bson:"role" mson:"collection=RoleModel"`
 }
 
+type UserLoginModel struct {
+	Email    string `json:"email,omitempty" validate:"required" bson:"email,omitempty" mson:"cunique"`
+	Password string `json:"password,omitempty" validate:"required" bson:"password,omitempty"`
+}
+
 // type UserModel struct {
 // 	ID            primitive.ObjectID `json:"_id,omitempty" bson:"_id,omitempty" `
 // 	Name          string             `json:"name,omitempty" bson:"name,omitempty"`

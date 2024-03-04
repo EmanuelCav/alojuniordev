@@ -21,6 +21,8 @@ func main() {
 
 	routes.UserRoutes(app)
 	routes.RoleRoutes(app)
+	routes.ToolRoutes(app)
+	routes.CategoryRoutes(app)
 
 	err := app.Listen(":" + config.Config()["port"])
 

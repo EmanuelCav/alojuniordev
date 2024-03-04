@@ -74,3 +74,23 @@ func RegisterValid(user models.UserRegisterModel) string {
 	return ""
 
 }
+
+func LoginValid(user models.UserLoginModel) string {
+
+	var userValid models.UserModel
+
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	err := helper.ConnectionUser().FindOne(ctx, bson.M{"email": user.Email}).Decode(&userValid)
+
+	if err != nil {
+		return "Los campos no coinciden"
+	}
+
+	if !helper.CompareHash(userValid.Password, user.Password) {
+		return "Los campos no coinciden"
+	}
+
+	return ""
+}
