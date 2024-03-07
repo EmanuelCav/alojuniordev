@@ -7,11 +7,19 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      "emerald-main": "#6ee7b7",
-      "emerald-light": "#a7f3d0"
-    },
     extend: {
+      inset: {
+        'eye-left': '92%',
+      },
+      colors: {
+        'background-payload': 'rgba(0, 0, 0, 0.5)',
+      },
+      fontSize: {
+        "lgXl": '1.175rem'
+      },
+      boxShadow: {
+        "gray-shadow": '0 1px 2px 0 #dddddd'
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

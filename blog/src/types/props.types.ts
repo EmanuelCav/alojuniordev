@@ -24,13 +24,16 @@ export type TutorialSectionPropsType = {
     title: CategoryTypes;
 }
 
-export type FormsPropsType = {
-    handleViewForm: () => void;
-    isRegister: boolean;
-}
-
 export type InputPropsType = {
     type: InputTypes;
     text: string;
     autofocus: boolean;
+    autocomplete: boolean;
+}
+
+export type InputPasswordPropsType = {
+    text: string;
+    name: string;
+    isPassword: boolean;
+    func: () => void;
 }
