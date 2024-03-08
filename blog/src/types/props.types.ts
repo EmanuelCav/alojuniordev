@@ -1,7 +1,10 @@
 import { StaticImageData } from "next/image";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import { FieldError, UseFormRegister } from "react-hook-form";
 
 import { ITutorial } from "@/interface/Content";
-import { CategoryTypes, InputTypes } from "./key.types";
+import { ILogin, IMainUser } from "@/interface/User";
+import { CategoryTypes, InputLoginTextTypes, InputTypes } from "./key.types";
 
 export type NavigationTypeProps = {
     text: string;
@@ -26,9 +29,11 @@ export type TutorialSectionPropsType = {
 
 export type InputPropsType = {
     type: InputTypes;
-    text: string;
+    text: InputLoginTextTypes;
     autofocus: boolean;
     autocomplete: boolean;
+    register: UseFormRegister<ILogin>;
+    errors: FieldError | undefined;
 }
 
 export type InputPasswordPropsType = {
@@ -36,4 +41,9 @@ export type InputPasswordPropsType = {
     name: string;
     isPassword: boolean;
     func: () => void;
+}
+
+export type LoginPropsType = {
+    login: (userData: IMainUser) => void;
+    router: AppRouterInstance;
 }
