@@ -13,9 +13,11 @@ type UserModel struct {
 	Password   string             `json:"password,omitempty" validate:"required" bson:"password,omitempty"`
 	Email      string             `json:"email,omitempty" validate:"required" bson:"email,omitempty" mson:"cunique"`
 	Role       primitive.ObjectID `json:"role" bson:"role" mson:"collection=RoleModel"`
+	Photo      primitive.ObjectID `json:"photo" bson:"photo" mson:"collection=ImageModel"`
 	Phone      string             `json:"phone" bson:"phone" mson:"cunique"`
 	Reputation int                `json:"reputation,omitempty" bson:"reputation,omitempty"`
 	Status     bool               `json:"status,omitempty" bson:"status,omitempty"`
+	Social     []string           `json:"social" bson:"social"`
 	CreatedAt  primitive.DateTime `json:"created_at,omitempty" bson:"created_at,omitempty"`
 	UpdatedAt  primitive.DateTime `json:"updated_at,omitempty" bson:"updated_at,omitempty"`
 }
@@ -33,22 +35,7 @@ type UserLoginModel struct {
 	Password string `json:"password,omitempty" validate:"required" bson:"password,omitempty"`
 }
 
-// type UserModel struct {
-// 	ID            primitive.ObjectID `json:"_id,omitempty" bson:"_id,omitempty" `
-// 	Name          string             `json:"name,omitempty" bson:"name,omitempty"`
-// 	Password      string             `json:"password,omitempty" bson:"password,omitempty"`
-// 	Email         string             `json:"email,omitempty" bson:"email,omitempty" mson:"cunique"`
-// 	FirebaseToken string             `json:"firebaseToken" bson:"firebaseToken" mson:"unique"`
-// 	Test          primitive.ObjectID `json:"test" bson:"test" mson:"collection=UserModel"`
 // 	Teams         primitive.A        `json:"teams" bson:"teams" mson:"collection=UserModel"`
-// 	MainProfile   string             `json:"mainProfile" bson:"mainProfile"`
-// 	Phone         string             `json:"phone" bson:"phone" mson:"cunique"`
-// 	SocialMedia   string             `json:"socialMedia" bson:"socialMedia"`
-// 	Strengths     string             `json:"strengths" bson:"strengths"`
-// 	Developments  string             `json:"developments" bson:"developments"`
-// 	UserType      int                `json:"userType" bson:"userType"`
-// 	Status        int                `json:"status" bson:"status"`
-// }
 
 // PopulateTest This will populate the test field and give to you
 func (c *UserModel) PopulateTest() *UserModel {
