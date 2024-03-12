@@ -13,3 +13,10 @@ type ToolModel struct {
 	CreatedAt        primitive.DateTime `json:"created_at,omitempty" bson:"created_at,omitempty"`
 	UpdatedAt        primitive.DateTime `json:"updated_at,omitempty" bson:"updated_at,omitempty"`
 }
+
+type ToolCreateModel struct {
+	Tool             string `json:"tool,omitempty" bson:"tool,omitempty" validate:"required" mson:"cunique"`
+	ShortDesciprtion string `json:"short_description,omitempty" bson:"short_description,omitempty" validate:"required"`
+	Desciprtion      string `json:"description,omitempty" bson:"description,omitempty" validate:"required"`
+	Categoty         string `json:"category,omitempty" bson:"category,omitempty" validate:"required"`
+}

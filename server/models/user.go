@@ -27,7 +27,7 @@ type UserRegisterModel struct {
 	Password string `json:"password,omitempty" validate:"required" bson:"password,omitempty"`
 	Confirm  string `json:"confirm,omitempty" validate:"required" bson:"confirm,omitempty"`
 	Email    string `json:"email,omitempty" validate:"required" bson:"email,omitempty" mson:"cunique"`
-	Role     string `json:"role" bson:"role" mson:"collection=RoleModel"`
+	Role     string `json:"role" bson:"role"`
 }
 
 type UserLoginModel struct {

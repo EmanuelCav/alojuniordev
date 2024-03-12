@@ -23,6 +23,7 @@ func main() {
 	routes.RoleRoutes(app)
 	routes.ToolRoutes(app)
 	routes.CategoryRoutes(app)
+	routes.ProjectsRoutes(app)
 
 	err := app.Listen(":" + config.Config()["port"])
 

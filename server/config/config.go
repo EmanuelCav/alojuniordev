@@ -25,6 +25,10 @@ func Config() map[string]string {
 	variables["categoryCollection"] = envFile["CATEGORY_COLLECTION"]
 	variables["toolCollection"] = envFile["TOOL_COLLECTION"]
 	variables["userMainRole"] = envFile["USER_MAIN_ROLE"]
+	variables["cloud_name"] = envFile["CLOUD_NAME"]
+	variables["api_key"] = envFile["API_KEY"]
+	variables["api_secret"] = envFile["API_SECRET"]
+	variables["folder"] = envFile["FOLDER"]
 
 	return variables
 

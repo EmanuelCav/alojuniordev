@@ -11,11 +11,16 @@ func ValidateEmail(email string) bool {
 }
 
 func ValidateStringAndNumber(text string) bool {
-	isStringNumber := regexp.MustCompile(`^[a-zA-Z0-9ñÑ]+$`).MatchString
+	isStringNumber := regexp.MustCompile(`^[a-zA-Z0-9ñÑ ]+$`).MatchString
 	return isStringNumber(text)
 }
 
 func ValidateString(text string) bool {
-	isString := regexp.MustCompile(`^[a-zA-ZñÑ]+$`).MatchString
+	isString := regexp.MustCompile(`^[a-zA-ZñÑ ]+$`).MatchString
 	return isString(text)
+}
+
+func ValidateSomeCharacters(text string) bool {
+	isSomeCharacters := regexp.MustCompile("^[^<>]+$").MatchString
+	return isSomeCharacters(text)
 }
